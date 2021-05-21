@@ -28,6 +28,7 @@ public class ValidationController {
 	{
 		if(result.hasErrors()) {
 			System.out.println(result);	
+			return "form";
 		}
 		System.out.println(loginData);
 		return "success";
