@@ -1,8 +1,16 @@
-package com.example.entity;
+package com.example.entities;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 public class LoginData {
-
+	
+	
+	@NotBlank(message = "User name can not be empty...!") 
+    @Size(min = 3,max = 8 ,message = "username must be between 3-8")
 	private String userName;
+	
+	
 	private String email;
 	public String getUserName() {
 		return userName;
